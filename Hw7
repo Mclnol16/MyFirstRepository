@@ -1,0 +1,14 @@
+```{r}
+library(tidyverse)
+x <- c(1,2,3,4,5)
+y <- c(3.4,4.1,4.2,4.7,5.3)
+```
+```{r}
+hw7 <- data.frame(x,y)
+```
+```{r}
+ggplot(data = hw7) + geom_point( aes(x=x, y=y)) + geom_smooth(method = 'lm', aes(x=x,y=y))
+```
+```{r}
+mse<-mean((x - y)^2)
+rmsqe <- mean(sqrt((x-y)^2))
